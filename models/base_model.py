@@ -16,7 +16,7 @@ class BaseModel:
             for k, v in kwargs.items():
                 if k == "created_at":
                     self.created_at = datetime.strptime(
-                        kwargs["updated_at"], time)
+                        kwargs["created_at"], time)
                 elif k == "updated_at":
                     self.updated_at = datetime.strptime(
                         kwargs["updated_at"], time)

@@ -13,15 +13,15 @@ class BaseModel:
         time = "%Y-%m-%dT%H:%M:%S.%f"
         if kwargs:
             del kwargs["__class__"]
-            for k in kwargs.items():
+            for k, v in kwargs.items():
                 if k == "created_at":
-                    self.__dict__["created_at"] = datetime.strptime(
+                    self.created_at = datetime.strptime(
                         kwargs["updated_at"], time)
                 elif k == "updated_at":
-                    self.__dict__["updated_at"] = datetime.strptime(
+                    self.updated_at = datetime.strptime(
                         kwargs["updated_at"], time)
             else:
-                self.__dict__ = kwargs[k]
+                setattr(self, k, v)
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()

@@ -26,5 +26,6 @@ class HBNBCommand(cmd.Cmd):
         of repeating the last command by overriding the emptyline method"""
         pass
 
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()

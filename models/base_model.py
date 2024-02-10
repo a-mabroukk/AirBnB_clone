@@ -20,8 +20,8 @@ class BaseModel:
                 elif k == "updated_at":
                     self.updated_at = datetime.strptime(
                         kwargs["updated_at"], time)
-            else:
-                setattr(self, k, v)
+                else:
+                    setattr(self, k, v)
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()

@@ -2,7 +2,6 @@
 from datetime import datetime
 from uuid import uuid4
 import models
-
 """
 Module BaseModel
 Parent of all classes
@@ -22,8 +21,6 @@ class BaseModel():
     def __init__(self, *args, **kwargs):
         """
         Initialize attributes: random uuid, dates created/updated
-
-
         """
         if kwargs:
             for key, val in kwargs.items():

@@ -64,11 +64,8 @@ class BaseModel():
         """
         Return dic with string formats of times; add class info to dic
         """
-        dic = {}
-        dic["__class__"] = self.__class__.__name__
-        for k, v in self.__dict__.items():
-            if isinstance(v, (datetime, )):
-                dic[k] = v.isoformat()
-            else:
-                dic[k] = v
-        return dic
+        mydict = self.__dict__.copy()
+        new_dict = {**mydict, **{"__class__": self.__class__.__name__},
+                    **{"created_at": self.created_at.isoformat()},
+                    **{"updated_at": self.updated_at.isoformat}}
+        return new_dict

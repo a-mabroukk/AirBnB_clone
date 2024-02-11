@@ -23,7 +23,7 @@
 
 #### Installation
 ```
-git clone git@github.com:gjdame/AirBnB_clone.git
+git clone https://github.com/MohamedAbd-elrady/AirBnB_clone.git
 cd AirBnB_clone
 ```
 #### Usage
@@ -72,4 +72,4 @@ $
 ---
 ### Authors
 - Mohamed Abd-elrady [Linkedin](https://www.linkedin.com/in/mohamed-abd-elrady-mosa/)
-- Alaa Fayed [Linkedin]()
+- Alaa Fayed [Linkedin](https://www.linkedin.com/in/alaa-fayed-47b44b285)
